@@ -1,12 +1,11 @@
-import Header from './components/Header';
-import Users from './components/Users';
+import Todos from "./components/Todos";
+
 import './App.css';
 
 const App = () => (
   <div className="App">
-    <Header/>
-    <Users/>
+    <Todos/>
   </div>
-)
+);
 
 export default App;
