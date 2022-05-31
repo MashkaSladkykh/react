@@ -1,10 +1,9 @@
-import Todos from "./components/Todos";
-
 import './App.css';
+import Squares from './components/Squares';
 
 const App = () => (
   <div className="App">
-    <Todos/>
+   <Squares/>
   </div>
 );
 
