@@ -1,11 +1,11 @@
 import "../styles.css";
 
-const Plus = ({onPlus}) => {
+const Plus = ({onClick}) => {
   return (
     <button 
       type="button" 
       className="btn" 
-      onClick={onPlus}>
+      onClick={onClick}>
       +
     </button>
   )

@@ -1,10 +1,10 @@
 import "../styles.css";
 
-const Minus = (onMinus) => (
+const Minus = ({onClick}) => (
   <button 
     type="button" 
     className="btn" 
-    onClick={onMinus}>-
+    onClick={onClick}>-
   </button>
 )
 

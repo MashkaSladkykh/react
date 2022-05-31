@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import SquareComponent from "../component";
+import SquareComponent from "./component";
 
 const Square = () => {
  
