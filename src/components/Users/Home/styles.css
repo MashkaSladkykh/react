@@ -1,0 +1,33 @@
+.User {
+    width: 25%;
+    margin: 20px 10px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+.User-name{ 
+    margin-bottom: 15px;
+}
+
+.User-mail{
+    color:  #0eb9f3;;
+}
+
+.User-phone {
+    text-decoration: none;
+}
+
+.User-company p{
+    font-style: italic;
+}
+
+.User-website {
+    text-decoration: none;
+    color: rgb(144, 0, 255);
+    font-weight: bold;
+}
+.User-website:hover{
+    color: black;
+}
