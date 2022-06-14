@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    max-width: 300px;
+    input, textarea, select {
+        margin: 5px;
+    }
+
+
+}

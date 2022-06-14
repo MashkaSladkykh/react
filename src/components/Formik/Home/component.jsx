@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import React  from "react";
+import React from "react";
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
         <h1>Welcome to the homepage!</h1>
       </main>
       <nav style={{textAlign:"center"}}>
-        <Link to="/users" style={{padding:"20px"}}>Click here to see all the users</Link>
+        <Link to="/users" style={{padding:"20px"}}>Click here to create new user</Link>
         <Link to="/">Click here to go back to homepage</Link>
       </nav>
       <Outlet/>
