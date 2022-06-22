@@ -1,28 +1,42 @@
-import React, { useEffect, useState} from "react";
-import { Link, Outlet } from "react-router-dom";
-import "./styles.scss";
+import {useEffect} from "react";
+import {connect} from "react-redux";
 
-const Users = () => {
-  const [users, setUsers] = useState([]);
+import {setUsers} from '../../store/users/actions';
+import {selectUsers, selectUsersLength} from '../../store/users/selectors';
+
+import User from './User';
+
+import './styles.scss';
+
+const Users = ({users, usersLength, setUsers}) => {
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-    .then(data => data.json())
-    .then(users => setUsers(users))
-  },[])
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => {
+        setUsers(data);
+      })
+  }, []);
 
   return (
-    <div className="Wrapper">
-      <ul className="Users">
-        {users.map(({id, name}) => {
-          return (<li key={id} style={{listStyleType:"none", marginBottom:"5px"}}>
-            <Link to={`/users/${id}`} style={{textDecoration:"none"}}>{name}</Link>
-          </li>)
-        })}
-      </ul>
-    <Outlet/>
-    </div>
+   <div>
+     <h1>Users count: {usersLength}</h1>
+     <ul className="Wrapper">
+       {users.length === 0
+         ? <div>Empty state</div>
+         : users.map(user => <User key={user.id} {...user} />)
+       }
+     </ul>
+   </div>
   )
-  
 }
 
-export default Users;
+const mapStateToProps = state => ({
+  users: selectUsers(state),
+  usersLength: selectUsersLength(state),
+})
+
+const mapDispatchToProps = {
+  setUsers,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Users);

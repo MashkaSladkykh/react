@@ -1,0 +1,60 @@
+.todos {
+    padding: 30px;
+    max-width: 600px;
+    border: 1px solid black;
+    margin: 30px auto;
+    text-align: left;
+  
+    .title {
+      margin: 0 0 15px;
+    }
+  }
+
+.enter-wrap {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 650px;
+  margin: 0 auto; 
+
+  .enter {
+      width: 100%;
+      padding: 0 15px;
+  }
+
+  .add {
+      white-space: nowrap;
+      padding: 10px;
+      margin-left: 5px;
+  }
+}
+
+.todos {
+  padding: 30px;
+}
+.todos button {
+  margin-left: 5px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .check {
+    margin-right: 5px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}

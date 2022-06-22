@@ -1,4 +1,6 @@
 .Users {
+    text-align: center;
+
     a{
         font-size: 20px;
         color: black;
@@ -11,4 +13,6 @@
 .Wrapper {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+
 }

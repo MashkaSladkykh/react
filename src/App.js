@@ -1,23 +1,15 @@
+import {Provider} from 'react-redux';
 import './App.css';
-import { Routes, Route } from "react-router-dom";
-import React from "react";
-import Home from './components/Formik/Home/component';
-import Error from './components/Formik/Error/component';
-import Posts from './components/Formik';
+import store from './store/configureStore';
 
+import Todos from './components/Todos redux';
 
 const App = () => (
-  <div className="App">
-    <Routes>
-      <Route path="/" element={<Home />}>
-        <Route path="/users" element={<Posts />}>
-        </Route>
-        <Route path='*' element={<Error />}/>
-      </Route>
-    </Routes>
-</div>
+  <Provider store={store}>
+    <Todos/>
+  </Provider>
 );
-
+ 
 export default App;
 
 
