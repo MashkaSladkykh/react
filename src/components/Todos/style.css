@@ -1,0 +1,23 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.check {
+    margin-right: 5px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.list {
+    padding: 0;
+    list-style: none;
+}
