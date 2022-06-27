@@ -7,14 +7,13 @@ const TodoInput = () => {
     const dispatch = useDispatch();
     const [newTodo, setNewTodo] = useState();
     const handleChange = e => setNewTodo(e.target.value);
-    let nextTodoId = 0;
     const handleClick = () => {
       if(newTodo){
       dispatch({
       type:'ADD_TODO',
       payload: {
         value: newTodo,
-        id: nextTodoId++,
+        id: Math.random(),
         checked: false
       }})
     }}
